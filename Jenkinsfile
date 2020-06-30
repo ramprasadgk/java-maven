@@ -79,7 +79,7 @@ pipeline {
 			 if ((env.BRANCH_NAME =~ /develop/)){
                     		
                 	        input(id: "Is this a Relase candidate?", message: "Relase to ..?", ok: 'Release')
-				STDOUT = bat label: "Cloning Repo ${GH_URL}",
+				STDOUT =  "Cloning Repo ${GH_URL}",
 				returnStdout: true,
 				script:""" ${GIT_HOME} clone ${GH_URL} ."""
 				echo STDOUT
