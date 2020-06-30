@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Clone') {
             steps {
-                git branch: env.BRANCH_NAME, credentialsId: 'github', url: 'https://github.com/AtlasWD/Atlas.git'
+                git branch: env.BRANCH_NAME, credentialsId: 'github', url: 'https://github.com/ramprasadgk/java-maven.git'
             }
         }
         stage ('env'){
@@ -20,7 +20,7 @@ pipeline {
 			
 			
 			def GH_URL = env.GIT_URL
-  			GIT_HOME = tool 'git_win'
+  			GIT_HOME = tool 'git'
 			cleanWs()
                         if ((env.BRANCH_NAME =~ /Release.*/)){
 				input(id: "Deploy to production?", message: "Deploy to Prod", ok: 'Deploy')
