@@ -8,7 +8,8 @@ pipeline {
         }
         stage ('env'){
             steps {
-                echo "bracnh : ${env.GIT_URL}"
+                echo "url : ${env.GIT_URL}"
+		echo "branch : ${env.BRANCH_NAME}"
                 
             }
         }
@@ -21,7 +22,7 @@ pipeline {
 			
 			def GH_URL = env.GIT_URL
   			GIT_HOME = tool 'git'
-			cleanWs()
+			//cleanWs()
                         if ((env.BRANCH_NAME =~ /Release.*/)){
 				input(id: "Deploy to production?", message: "Deploy to Prod", ok: 'Deploy')
                     		echo 'Deployed to production'
@@ -79,10 +80,10 @@ pipeline {
 			 if ((env.BRANCH_NAME =~ /develop/)){
                     		
                 	        input(id: "Is this a Relase candidate?", message: "Relase to ..?", ok: 'Release')
-				STDOUT = sh label: "Cloning Repo ${GH_URL}",
-				returnStdout: true,
-				script:""" ${GIT_HOME} clone ${GH_URL} ."""
-				echo STDOUT
+				//STDOUT = sh label: "Cloning Repo ${GH_URL}",
+				//returnStdout: true,
+				//script:""" ${GIT_HOME} clone ${GH_URL} ."""
+				//echo STDOUT
 				STDOUT = sh label: "Checking out branch ${env.BRANCH_NAME}",
 				returnStdout: true,
 				script:""" ${GIT_HOME} checkout ${env.BRANCH_NAME}"""
