@@ -5,7 +5,7 @@
 
   <groupId>com.example</groupId>
   <artifactId>java-maven-junit-helloworld</artifactId>
-  <version>1.0.0.CR</version>
+  <version>1.0.1.CR-SNAPSHOT</version>
   <packaging>jar</packaging>
   <distributionManagement>
 	  <snapshotRepository>
@@ -21,7 +21,7 @@
 </distributionManagement>
   <scm>
     <developerConnection>scm:git:https://github.com/ramprasadgk/java-maven.git/</developerConnection>
-    <tag>java-maven-junit-helloworld-1.0.0.CR</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
