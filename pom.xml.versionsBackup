@@ -7,7 +7,7 @@
 
   <groupId>com.example</groupId>
   <artifactId>java-maven-junit-helloworld</artifactId>
-  <version>1.0.0.CR-SNAPSHOT</version>
+  <version>${revision}</version>
   <packaging>jar</packaging>
   <distributionManagement>
 	  <snapshotRepository>
