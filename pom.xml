@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
   <artifactId>java-maven-junit-helloworld</artifactId>
-  <version>1.0.0.CR-SNAPSHOT</version>
+  <version>1.0.0.CR</version>
   <packaging>jar</packaging>
   <distributionManagement>
 	  <snapshotRepository>
@@ -23,6 +21,7 @@
 </distributionManagement>
   <scm>
     <developerConnection>scm:git:https://github.com/ramprasadgk/java-maven.git/</developerConnection>
+    <tag>java-maven-junit-helloworld-1.0.0.CR</tag>
   </scm>
 
   <properties>
