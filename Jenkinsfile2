@@ -1,0 +1,21 @@
+@Library('test') _
+
+pipeline {
+    
+agent any
+ stages {
+     stage('first'){
+         steps{
+             script {
+                logs.info 'Starting'
+                logs.warning 'Nothing to do!'
+                sayHello()
+                sayHello
+                sayHello('sdf')
+                githubNotify description: 'This is a shorted example',  status: 'SUCCESS'
+             }
+         }
+     }
+ }
+
+}
