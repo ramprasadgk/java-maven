@@ -9,7 +9,7 @@ agent any
                  script{
                     echo sh(returnStdout: true, script: 'env')
                     gitHubPRStatus statusMessage: 'runss'
-                    githubPRAddLabels labelProperty: labels ( "new label" )
+                    githubPRAddLabels labelProperty: labels ( "newlabel\n another" )
                    
                    
                     echo 'done'
