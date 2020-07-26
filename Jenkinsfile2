@@ -4,7 +4,7 @@ pipeline {
     
 agent any
  stages {
-         stage('stage 0'){
+         stage('stage 00'){
              steps{
                  script{
                      
