@@ -8,7 +8,7 @@ agent any
              steps{
                  script{
                     echo sh(returnStdout: true, script: 'env')
-                    gitHubPRStatus statusMessage: message('run')
+                    gitHubPRStatus statusMessage: 'runss'
                    
                    
                     echo 'done'
