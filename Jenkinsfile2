@@ -7,7 +7,7 @@ agent any
          stage('stage 0'){
              steps{
                  script{
-                     echo env
+                    echo sh(returnStdout: true, script: 'env')
       
                  }
              }
