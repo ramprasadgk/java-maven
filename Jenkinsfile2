@@ -10,6 +10,7 @@ agent any
                     echo sh(returnStdout: true, script: 'env')
                     gitHubPRStatus statusMessage: 'runss'
                     githubPRAddLabels labelProperty: labels ( "newlabel\n another" )
+                    githubPRClosePublisher statusVerifier: buildStatus("SUCCESS"),errorHandler: buildStatus("SUCCESS")
                    
                    
                     echo 'done'
