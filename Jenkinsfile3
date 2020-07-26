@@ -10,8 +10,10 @@ pipeline {
     post { 
         always { 
             echo 'I will always say Hello again!'
+             properties([[$class: 'GithubProjectProperty',
+                projectUrlStr: 'https://github.com/ramprasadgk/java-maven.git']])
             step([$class: 'GitHubIssueNotifier',
-               issueAppend: true])
+               issueAppend: true, issueTitle 'test',''])
         }
     }
 }
