@@ -9,7 +9,7 @@ agent any
                  script{
                     echo sh(returnStdout: true, script: 'env')
                     setGitHubPullRequestStatus
-                    githubPRComment comment: content:'enjoy'
+                    
                     echo 'done'
       
                  }
