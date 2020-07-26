@@ -10,7 +10,11 @@ agent any
                     echo sh(returnStdout: true, script: 'env')
                     gitHubPRStatus statusMessage: 'runss'
                     githubPRAddLabels labelProperty: labels ( "newlabel\n another" )
-                    githubPRClosePublisher statusVerifier: status("SUCCESS"),errorHandler: stauts("SUCCESS")
+                    step([$class: 'GitHubIssueNotifier',
+                          issueAppend: true,
+                          issueLabel: '',
+                          issueTitle: '$JOB_NAME $BUILD_DISPLAY_NAME failed'])
+
                    
                    
                     echo 'done'
