@@ -4,6 +4,18 @@ pipeline {
     
 agent any
  stages {
+         stage('stage 0'){
+             steps{
+                 script{
+                     
+      step([$class: 'GitHubCommitStatusSetter',
+            contextSource: [$class: 'ManuallyEnteredCommitContextSource',context: 'Test Context'],
+             statusResultSource: [$class: 'ConditionalStatusResultSource',                            results: [[$class: 'AnyBuildResult',
+                                            message: 'test message',
+                                            state: 'SUCCESS']]]])
+                 }
+             }
+         }
      stage('first'){
          steps{
              script {
@@ -12,7 +24,8 @@ agent any
                 sayHello()
                 sayHello
                 sayHello('sdf')
-                githubNotify description: 'This is a shorted example',  status: 'SUCCESS'
+                setGitHubPullRequestStatus
+                
              }
          }
      }
