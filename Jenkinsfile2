@@ -9,7 +9,7 @@ agent any
                  script{
                     echo sh(returnStdout: true, script: 'env')
                     gitHubPRStatus statusMessage: message('run')
-                    #setGitHubPullRequestStatus state: 'SUCCESS', context: 'custom-context2', message: "Run "
+                   
                    
                     echo 'done'
       
