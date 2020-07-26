@@ -8,8 +8,8 @@ agent any
              steps{
                  script{
                     echo sh(returnStdout: true, script: 'env')
-                    
-                    setGitHubPullRequestStatus state: 'SUCCESS', context: 'custom-context2', message: "Run "
+                    gitHubPRStatus statusMessage: message('run')
+                    #setGitHubPullRequestStatus state: 'SUCCESS', context: 'custom-context2', message: "Run "
                    
                     echo 'done'
       
