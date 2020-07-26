@@ -8,7 +8,8 @@ agent any
              steps{
                  script{
                     echo sh(returnStdout: true, script: 'env')
-                    githubPRComment comment: 'enjoy'
+                    setGitHubPullRequestStatus
+                    githubPRComment comment: content:'enjoy'
                     echo 'done'
       
                  }
