@@ -16,7 +16,7 @@ pipeline {
             echo 'I will always say Hello again!'
            
             step([$class: 'GitHubIssueNotifier',
-               issueAppend: true, issueTitle 'test',''])
+               issueAppend: true, issueTitle: 'test'])
         }
     }
 }
