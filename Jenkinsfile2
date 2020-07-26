@@ -9,6 +9,7 @@ agent any
                  script{
                     echo sh(returnStdout: true, script: 'env')
                     githubPRComment comment: 'enjoy'
+                    echo 'done'
       
                  }
              }
