@@ -27,10 +27,10 @@ pipeline {
 				input(id: "Deploy to production?", message: "Deploy to Prod", ok: 'Deploy')
                     		echo 'Deployed to production'
 				
-				STDOUT = sh label: "Cloning Repo ${GH_URL}",
-				returnStdout: true,
-				script:""" ${GIT_HOME} clone ${GH_URL} ."""
-				echo STDOUT
+				//STDOUT = sh label: "Cloning Repo ${GH_URL}",
+				//returnStdout: true,
+				//script:""" ${GIT_HOME} clone ${GH_URL} ."""
+				//echo STDOUT
 				
 				STDOUT = sh label: "git fetch all ${GH_URL}",
 				returnStdout: true,
