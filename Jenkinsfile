@@ -5,6 +5,7 @@ pipeline {
 	            steps {
 	                git branch: env.BRANCH_NAME, credentialsId: 'github', url: 'https://github.com/ramprasadgk/java-maven.git'
             }
+	}
         stage('Build') { 
             steps {
             echo "build"
