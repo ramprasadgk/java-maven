@@ -9,13 +9,14 @@ pipeline {
         stage('Build') { 
             steps {
             echo "build"
-	    sh "mvn test"
+	    sh "mvn compile"
             }
         }
         
         stage('Test') { 
             steps {
               echo "test"
+	      sh "mvn test"
             }
         }
         stage('Deploy') { 
