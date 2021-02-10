@@ -12,9 +12,9 @@ pipeline {
         stage('Build') {
 	    
             
-           
+		steps{
 	    maven  "compile"
-        
+		}
         }
         
         stage('Test') { 
