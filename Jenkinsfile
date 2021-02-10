@@ -1,5 +1,8 @@
 pipeline {
     agent any 
+	 tools {
+        maven 'maven' 
+    }
     stages {
         stage ('Clone') {
 	            steps {
@@ -7,11 +10,11 @@ pipeline {
             }
 	}
         stage('Build') {
-	    def mvn = tool 'maven'
+	    
             steps {
 		    
             echo "build"
-	    mvn "compile"
+	    maven  "compile"
             }
         }
         
