@@ -6,14 +6,17 @@ pipeline {
 	                git branch: 'master', credentialsId: 'github', url: 'https://github.com/ramprasadgk/java-maven.git'
             }
 	}
-        stage('Build') { 
+        stage('Build') {
+	    def mvn = tool 'maven'
             steps {
+		    
             echo "build"
-	    sh "mvn compile"
+	    mvn "compile"
             }
         }
         
         stage('Test') { 
+		
             steps {
               echo "test"
 	      sh "mvn test"
