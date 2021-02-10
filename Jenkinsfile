@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
 	    
             
-            echo "build"
+           
 	    maven  "compile"
         
         }
