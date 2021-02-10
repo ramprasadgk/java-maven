@@ -1,7 +1,7 @@
 pipeline {
     agent any 
 	 tools {
-        maven 'maven' 
+        maven 'Maven 3.3.9'
     }
     stages {
         stage ('Clone') {
@@ -13,7 +13,7 @@ pipeline {
 	    
             
 		steps{
-	    maven  "compile"
+	     sh "mvn compile"
 		}
         }
         
