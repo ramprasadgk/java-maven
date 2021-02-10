@@ -11,11 +11,10 @@ pipeline {
 	}
         stage('Build') {
 	    
-            steps {
-		    
+            
             echo "build"
 	    maven  "compile"
-            }
+        
         }
         
         stage('Test') { 
